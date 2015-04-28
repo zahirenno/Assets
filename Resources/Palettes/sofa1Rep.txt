@@ -1,0 +1,87 @@
+id	1	Blue
+B1=sofa1#1
+B2=sofa1#1
+C1=sofa1#3
+C2=sofa1#2
+D1=sofa1#5
+D2=sofa1#4
+
+id	2	CreamyDreamy
+B1=sofa1#6
+B2=sofa1#10
+C1=sofa1#9
+C2=sofa1#6
+D1=sofa1#8
+D2=sofa1#7
+
+id	3	Echo
+B1=sofa1#11
+B2=sofa1#12
+C1=sofa1#13
+C2=sofa1#14
+D1=sofa1#14
+D2=sofa1#13
+
+id	4	Hertz
+B1=sofa1#16
+B2=sofa1#15
+C1=sofa1#18
+C2=sofa1#17
+D1=sofa1#17
+D2=sofa1#18
+
+id	5	Mazza
+B1=sofa1#19
+B2=sofa1#21
+C1=sofa1#22
+C2=sofa1#30
+D1=sofa1#23
+D2=sofa1#22
+
+id	6	GB
+B1=sofa1#25
+B2=sofa1#25
+C1=sofa1#26
+C2=sofa1#24
+D1=sofa1#24
+D2=sofa1#26
+
+id	7	Spicy
+B1=sofa1#27
+B2=sofa1#27
+C1=sofa1#29
+C2=sofa1#30
+D1=sofa1#28
+D2=sofa1#28
+
+id	8	GiantGoldFish
+B1=sofa1#33
+B2=sofa1#32
+C1=sofa1#35
+C2=sofa1#31
+D1=sofa1#35
+D2=sofa1#34
+
+id	9	Cheers
+B1=sofa1#38
+B2=sofa1#37
+C1=sofa1#38
+C2=sofa1#39
+D1=sofa1#36
+D2=sofa1#40
+
+id	10	Moment
+B1=sofa1#41
+B2=sofa1#42
+C1=sofa1#42
+C2=sofa1#41
+D1=sofa1#45
+D2=sofa1#44
+
+id	11	Honey
+B1=sofa1#46
+B2=sofa1#47
+C1=sofa1#50
+C2=sofa1#49
+D1=sofa1#48
+D2=sofa1#49

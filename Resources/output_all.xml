@@ -1,0 +1,44 @@
+<Room posX="0" posY="0" width="400" depth="400">
+<Furnitures>
+<Furniture width="174" depth="92" height="87" rotation="0">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="0" posY="0"/>
+</Furniture>
+<Furniture width="90" depth="90" height="44" rotation="0.172313">
+<CatalogId>Renouzate#Table2x2</CatalogId>
+<Name>Table2x2</Name>
+<Position posX="1.58766" posY="136.118"/>
+</Furniture>
+<Furniture width="87" depth="92" height="87" rotation="3.29467">
+<CatalogId>Renouzate#sofa1</CatalogId>
+<Name>sofa1</Name>
+<Position posX="-26.1529" posY="293.236"/>
+</Furniture>
+<Furniture width="87" depth="92" height="87" rotation="1.6584">
+<CatalogId>Renouzate#sofa1</CatalogId>
+<Name>sofa1</Name>
+<Position posX="145.065" posY="129.203"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0.65912">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="159.289" posY="21.0538"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="5.12954">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="-130.316" posY="158.397"/>
+</Furniture>
+<Furniture width="45" depth="45" height="44" rotation="4.32107">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="59.4599" posY="294.762"/>
+</Furniture>
+<Furniture width="45" depth="45" height="44" rotation="5.22837">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="140.112" posY="216.281"/>
+</Furniture>
+</Furnitures>
+</Room>

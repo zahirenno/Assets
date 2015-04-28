@@ -1,0 +1,127 @@
+fileFormatVersion: 2
+guid: 4ef968acca40b184e89c0de32035577b
+timeCreated: 1427624254
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Couche:OBJECT000
+    100002: Couche:OBJECT001
+    100004: Couche:OBJECT002
+    100006: Couche:OBJECT003
+    100008: Couche:OBJECT004
+    100010: Couche:OBJECT005
+    100012: Couche:OBJECT006
+    100014: Couche:OBJECT007
+    100016: Couche:OBJECT008
+    100018: Couche:OBJECT009
+    100020: Couche:OBJECT010
+    100022: //RootNode
+    100024: sweethome3d_window_pane
+    400000: Couche:OBJECT000
+    400002: Couche:OBJECT001
+    400004: Couche:OBJECT002
+    400006: Couche:OBJECT003
+    400008: Couche:OBJECT004
+    400010: Couche:OBJECT005
+    400012: Couche:OBJECT006
+    400014: Couche:OBJECT007
+    400016: Couche:OBJECT008
+    400018: Couche:OBJECT009
+    400020: Couche:OBJECT010
+    400022: //RootNode
+    400024: sweethome3d_window_pane
+    2300000: Couche:OBJECT000
+    2300002: Couche:OBJECT001
+    2300004: Couche:OBJECT002
+    2300006: Couche:OBJECT003
+    2300008: Couche:OBJECT004
+    2300010: Couche:OBJECT005
+    2300012: Couche:OBJECT006
+    2300014: Couche:OBJECT007
+    2300016: Couche:OBJECT008
+    2300018: Couche:OBJECT009
+    2300020: Couche:OBJECT010
+    2300022: sweethome3d_window_pane
+    3300000: Couche:OBJECT000
+    3300002: Couche:OBJECT001
+    3300004: Couche:OBJECT002
+    3300006: Couche:OBJECT003
+    3300008: Couche:OBJECT004
+    3300010: Couche:OBJECT005
+    3300012: Couche:OBJECT006
+    3300014: Couche:OBJECT007
+    3300016: Couche:OBJECT008
+    3300018: Couche:OBJECT009
+    3300020: Couche:OBJECT010
+    3300022: sweethome3d_window_pane
+    4300000: Couche:OBJECT000
+    4300002: Couche:OBJECT001
+    4300004: Couche:OBJECT002
+    4300006: Couche:OBJECT003
+    4300008: Couche:OBJECT004
+    4300010: Couche:OBJECT005
+    4300012: Couche:OBJECT006
+    4300014: Couche:OBJECT007
+    4300016: Couche:OBJECT008
+    4300018: Couche:OBJECT009
+    4300020: Couche:OBJECT010
+    4300022: sweethome3d_window_pane
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
