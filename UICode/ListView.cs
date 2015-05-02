@@ -96,9 +96,7 @@ public class ListView : MonoBehaviour {
 		if (numberOfItemsPerPage > listener.numberOfElements ())
 			numberOfItemsPerPage = listener.numberOfElements();
 	}
-
-	private List<Button> buttons = new List<Button>();
-
+	
 	private Dictionary<GameObject, int> elementIndex = new Dictionary<GameObject, int>();
 	private List<GameObject> reusable = new List<GameObject> ();
 	protected void updateVisible(){
@@ -158,8 +156,10 @@ public class ListView : MonoBehaviour {
 			element.SetParent(contentRect.transform);
 
 			Button buttonB = button.GetComponent<Button>();
-			buttonB.onClick.RemoveAllListeners();
-			buttonB.onClick.AddListener(() => listener.elementSelected(finali));
+			if (buttonB != null){
+				buttonB.onClick.RemoveAllListeners();
+				buttonB.onClick.AddListener(() => listener.elementSelected(finali));
+			}
 
 			element.anchorMax = new Vector2(0.5f, 1.0f);
 			element.anchorMin = new Vector2(0.5f, 1.0f);
@@ -171,9 +171,12 @@ public class ListView : MonoBehaviour {
 	}
 
 	protected void decomission(GameObject button){
-		button.GetComponent<Button> ().onClick.RemoveAllListeners ();
-		button.GetComponent<Image> ().sprite = null;
-		button.GetComponentInChildren<Text> ().text = "";
+		if (button.GetComponent<Button> () != null)
+			button.GetComponent<Button> ().onClick.RemoveAllListeners ();
+		if (button.GetComponent<Image> () != null)
+			button.GetComponent<Image> ().sprite = null;
+		if (button.GetComponent<Text>() != null)
+			button.GetComponentInChildren<Text> ().text = "";
 		button.SetActive (false);
 	}
 }

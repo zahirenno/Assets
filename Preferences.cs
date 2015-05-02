@@ -7,6 +7,8 @@ public class Preferences : MonoBehaviour
 	public Color primaryColor;
 	public Color secondaryColor;
 	public Color primaryTextColor;
+	public Color primaryListTextColor;
+	public Color secondaryListTextColor;
 	public Color backgroundColor;
 	public Font primaryTextFont;
 	public Font secondaryTextFont;
@@ -40,6 +42,9 @@ public class Preferences : MonoBehaviour
 		primaryColor = preDefColors ["Teal"];
 		secondaryColor = preDefColors ["Orange"];
 		primaryTextColor = colorFromHex("#FFFFFF");
+		primaryListTextColor = colorFromHex ("#000000");
+		secondaryListTextColor = Color.gray;
+
 		backgroundColor = Color.gray;
 		primaryTextFont = Resources.Load<Font> ("Fonts/Roboto-Regular");
 		secondaryTextFont = Resources.Load<Font> ("Fonts/Roboto-Light");

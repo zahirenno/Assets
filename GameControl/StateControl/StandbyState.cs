@@ -47,14 +47,15 @@ public class StandbyState : State {
 		
 	}
 
-	private Camera camera;
-	private float cameraFOV;
+	protected Camera camera;
+	protected float cameraFOV;
 
 	public override void Enter(){
-		FirstController.getGlobalFirstController ().deleteButtonIsVisible (false);
+
 		camera = Camera.main;
 		cameraFOV = this.camera.fieldOfView;
 
+		FirstController.getGlobalFirstController ().deleteButtonIsVisible (false);
 		FirstController.getGlobalFirstController ().regenButton.gameObject.SetActive (true);
 		FirstController.getGlobalFirstController ().navButtonIsVisible (true);
 
