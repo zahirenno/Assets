@@ -40,8 +40,8 @@ public class Preferences : MonoBehaviour
 		preDefColors.Add ("Blue Grey", colorFromHex ("#607D8B"));
 		preDefColors.Add ("Black", colorFromHex ("#000000"));
 		
-		primaryColor = preDefColors ["Teal"];
-		secondaryColor = preDefColors ["Orange"];
+		primaryColor = preDefColors ["Blue Grey"];
+		secondaryColor = preDefColors ["Deep Orange"];
 		primaryTextColor = colorFromHex("#FFFFFF");
 		primaryListTextColor = colorFromHex ("#000000");
 		secondaryListTextColor = Color.gray;
