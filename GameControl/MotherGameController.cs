@@ -14,11 +14,11 @@ public class MotherGameController : MonoBehaviour
 	public Button recolorButton;
 	public int current;
 	List<GameObject> rt;
-	
+	public RoomHelper roomHelper;
 	// Use this for initialization
 	void Start ()
 	{
-
+		roomHelper = new RoomHelper (null, RoomType.LivingRoom);
 		rt = new List<GameObject> ();
 		rt.Add (create());
 		
@@ -55,7 +55,7 @@ public class MotherGameController : MonoBehaviour
 	public void HandleRecolorClick(){
 		//TODO change 0 to current
 		rt[current].GetComponent<GameController>().cSt.Execute(new RefurnishRoomCommand(rt[current].GetComponent<GameController>().mainRoom.GetComponentInChildren<Room>()));
-		RoomConcretizer.refurnish(rt[current].GetComponent<GameController>().mainRoom.GetComponentInChildren<Room>());
+		roomHelper.Recolor(rt[current].GetComponent<GameController>().mainRoom.GetComponentInChildren<Room>());
 	}
 
 	public void HandleNextRoomClick(){
@@ -93,7 +93,6 @@ public class MotherGameController : MonoBehaviour
 		if (rt.Count > 0) {
 			GameObject temp = rt [current];
 			rt.RemoveAt (current);
-			
 			//if it is the lase one bring the previous one
 			if (current == rt.Count) {
 				//if there is more then 1 item left in the list
@@ -147,6 +146,7 @@ public class MotherGameController : MonoBehaviour
 
 		GameObject firstGameController = (GameObject)GameObject.Instantiate (firstGameControllerPrefab);
 		firstGameController.transform.SetParent (this.transform);
+		firstGameController.GetComponent<GameController> ().rh = roomHelper;
 		return firstGameController;
 		
 	}

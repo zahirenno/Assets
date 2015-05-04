@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour {
 		public GameObject hit = null;
 	}
 
+	public 	RoomHelper rh;
 	public GameObject mainRoom = null;
 
 	public StateStack ss1 = null;
@@ -44,9 +45,13 @@ public class GameController : MonoBehaviour {
 		ss1.update (gesture);
 	}
 
+
+
+
+
 	// Use this for initialization
 	void Start () {
-
+		rh.LoadConfigurations ();
 		reloadScene ();
 
 		PressGesture press = gameObject.AddComponent<PressGesture> ();
@@ -99,73 +104,17 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void loadRoom(string xmlContent){
-		Catalog catalog = Catalog.getCatalog ();
-
-		XmlDocument doc = new XmlDocument ();
-		
-		//doc.LoadXml (xmlContent);
-		doc.LoadXml (RoomConcretizer.pickConcreteFurnitures (xmlContent));
-		
-		XmlNode room = doc.SelectSingleNode ("Room").SelectSingleNode ("Furnitures");
-		XmlNodeList furnitures = room.SelectNodes ("Furniture");
-		
-		GameObject mainRoom = Instantiate<GameObject> ((GameObject)Resources.Load ("Room"));
-		//mainRoom.name = "Room 1";
-		mainRoom.GetComponent<EditableRoom> ().camera = Camera.main;
-
-		GameObject roomObj = new GameObject ("Room Container");
-		roomObj.AddComponent<Room> ().editableRoom = mainRoom.GetComponent<EditableRoom>();
-		roomObj.transform.SetParent(mainRoom.transform);
-		
-		Vector3 center = new Vector3 (0, 0, 0);
-		float nb = 0.0f;
-		
-		foreach (XmlNode furnitureNode in furnitures) {
-			string id = furnitureNode.SelectSingleNode("CatalogId").InnerText;
-			
-			XmlNode positionNode = furnitureNode.SelectSingleNode("Position");
-			Vector3 position = new Vector3();
-			position.x = (float)Convert.ToDouble(positionNode.Attributes["posX"].Value) * catalog.scale;
-			position.y = (float)Convert.ToDouble(furnitureNode.Attributes["height"].Value) * catalog.scale / 2.0f;
-			position.z = (float)Convert.ToDouble(positionNode.Attributes["posY"].Value) * catalog.scale;
-			
-			float angle = (float)Convert.ToDouble(furnitureNode.Attributes["rotation"].Value);
-			
-			if (id != null){
-				String mid = id;
-				
-				GameObject fur = catalog.createFurniture(mid, position, angle, true);
-				if (fur != null){
-					fur.transform.SetParent(roomObj.transform);
-					nb += 1.0f;
-					center += fur.transform.position;
-					
-					roomObj.GetComponent<Room>().furnitures.Add(fur.GetComponent<Furniture>());
-				}
-			}
-		}
-		
-		center /= -nb;
-		//roomObj.transform.Translate (center.x, 0, center.z);
-
-		mainRoom.transform.SetParent (this.transform);
-
-		this.mainRoom = mainRoom;
-	}
-
-
 
 	public void reloadScene(){
 		if (mainRoom != null) {
 			GameObject.Destroy (mainRoom);
 		}
 
-		loadRoom (Resources.Load<TextAsset> ("output_all").text);
-
+		mainRoom = rh.Create ();
+		mainRoom.transform.parent = this.gameObject.transform;
 		ReflectionProbe reflectionProbe = mainRoom.gameObject.GetComponentInChildren<ReflectionProbe> ();
 		if (reflectionProbe != null) {
-			Debug.Log("shshshdsgh");
+			Debug.Log ("shshshdsgh");
 			reflectionProbe.GetComponent<ReflectionProbe> ().RenderProbe ();
 		}
 	}

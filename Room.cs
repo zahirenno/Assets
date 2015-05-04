@@ -91,7 +91,7 @@ public class Room : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		centerRoom ();
+
 	}
 	
 	// Update is called once per frame

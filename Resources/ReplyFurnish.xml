@@ -1,0 +1,373 @@
+<message len="31827"><type name="ReplyFurnish"/><parameters>
+<Rooms>
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="4.71239">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="183.995" posY="215.951"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.0593" posY="216.867"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="307.903" posY="220.475"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0.590028">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="231.461" posY="52.9988"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="5.32642">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="54.6402" posY="51.9293"/>
+</Furniture>
+<Furniture width="53.479" depth="53.479" height="44" rotation="0">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="142.76" posY="24.376"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="174.977" posY="219.832"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.2076" posY="219.838"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="307.858" posY="219.877"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="5.791">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="82.2292" posY="52.9988"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="6.87913">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="267.792" posY="53.7931"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="307.858" posY="342.877"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="174.963" posY="209.016"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="306.989" posY="208.979"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.1758" posY="209.075"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="174.895" posY="43.4411"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="5.82183">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="60.7523" posY="51.7735"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="174.901" posY="222.521"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="305.042" posY="222.513"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.0687" posY="222.617"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0.785398">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="296.153" posY="53.9992"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="174.551" posY="43.01"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="4.71239">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="46.0687" posY="99.6169"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="174.922" posY="200.756"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="307.924" posY="204.92"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.1319" posY="202.295"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0.581376">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="255.816" posY="52.8445"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="-0.473617">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="94.7705" posY="51.9807"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="307.924" posY="327.92"/>
+</Furniture>
+<Furniture width="53.2879" depth="53.2879" height="44" rotation="0">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="174.57" posY="29.9177"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="182.959" posY="197.888"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="307.346" posY="196.96"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="46.0131" posY="197.639"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="0.382061">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="235.426" posY="50.6238"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="2.67824">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="301.061" posY="358.014"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="307.346" posY="73.9603"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="172.115" posY="201.165"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="307.33" posY="198.581"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="4.71239">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="52.4036" posY="203.172"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="5.77558">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="129.148" posY="52.8409"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="2.14774">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="301.06" posY="359.52"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="4.71239">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="52.4036" posY="80.1724"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+<Room tlX="0" tlY="0" brX="353" brY="409"><Furnitures>
+<Furniture width="48.6" depth="118.7" height="130.9" rotation="1.5708">
+<CatalogId>Renouzate#TVTable</CatalogId>
+<Name>TVTable</Name>
+<Position posX="175" posY="380"/>
+</Furniture>
+<Furniture width="135" depth="90" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table3x2</CatalogId>
+<Name>Table3x2</Name>
+<Position posX="167.313" posY="228.751"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="0">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="161.827" posY="61.9061"/>
+</Furniture>
+<Furniture width="174" depth="92" height="87" rotation="1.5708">
+<CatalogId>Renouzate#sofa2</CatalogId>
+<Name>sofa2</Name>
+<Position posX="306.923" posY="231.657"/>
+</Furniture>
+<Furniture width="68" depth="83" height="100" rotation="4.71239">
+<CatalogId>Renouzate#armchair</CatalogId>
+<Name>Armchair</Name>
+<Position posX="43.0299" posY="233.894"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="306.923" posY="108.657"/>
+</Furniture>
+<Furniture width="60" depth="60" height="44" rotation="1.5708">
+<CatalogId>Renouzate#Table1x1</CatalogId>
+<Name>Table1x1</Name>
+<Position posX="306.923" posY="354.657"/>
+</Furniture>
+</Furnitures>
+<Doors>
+<Furniture width="91.5" depth="14.5" height="208.5" rotation="4.712">
+<CatalogId>eTeks#door</CatalogId>
+<Name>Door</Name>
+<Position posX="0" posY="360"/>
+</Furniture>
+</Doors>
+</Room>
+
+</Rooms>
+</parameters>
+</message>
