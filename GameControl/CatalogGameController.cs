@@ -17,7 +17,7 @@ public class CatalogGameController : MonoBehaviour {
 	}
 
 	void newRoomButtonClicked(){
-		Application.LoadLevel ("j");
+		Application.LoadLevel ("EmptyRoomCreation");
 	}
 
 	// Update is called once per frame
