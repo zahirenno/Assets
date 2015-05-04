@@ -38,7 +38,10 @@ public class FurnitureGridViewController : ListViewController<List<FurnitureEntr
 	}
 
 	protected virtual void cellSelected(GameObject sender, int i){
-		Debug.Log (sender.GetComponent<FurniturePreviewCellView> ().furnitureEntry.name);
+
+		PlayerPrefs.SetString ("modelViewer_modelid", sender.GetComponent<FurniturePreviewCellView> ().furnitureEntry.id);
+		Application.LoadLevel ("modelViewer");
+
 	}
 
 	protected override int cellHeight(){

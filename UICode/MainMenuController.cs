@@ -17,11 +17,13 @@ public class MainMenuController : ListViewController<string>
 		data.Add ("Suggestions");
 		data.Add ("Rendering");
 		data.Add ("View Mode");
+		data.Add ("Exit");
 
 		icons.Add ("icons/ic_store_white_48dp");
 		icons.Add ("icons/ic_cached_white_48dp");
 		icons.Add ("icons/ic_extension_white_48dp");
 		icons.Add ("icons/ic_visibility_white_48dp");
+		icons.Add ("icons/ic_exit_to_app_white_48dp");
 
 		navigationController.title.text = "Posh.";
 
@@ -56,6 +58,9 @@ public class MainMenuController : ListViewController<string>
 		case 3:
 			ViewModeMenuController vmn = ViewController.createViewController<ViewModeMenuController>(this.navigationController, "View Mode");
 			this.navigationController.pushViewController(vmn);
+			break;
+		case 4:
+			Application.LoadLevel("catalogViewer");
 			break;
 		}
 

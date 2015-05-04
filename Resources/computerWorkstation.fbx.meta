@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: b25a6f08f68e7ca4b9e8fdae29854804
+timeCreated: 1430719311
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Couche:OBJECT000
+    100004: Couche:OBJECT001
+    100006: Couche:OBJECT002
+    100008: Couche:OBJECT003
+    100010: Couche:OBJECT004
+    100012: Couche:OBJECT005
+    100014: Couche:OBJECT006
+    100016: Couche:OBJECT007
+    100018: Couche:OBJECT008
+    100020: Couche:OBJECT009
+    100022: Couche:OBJECT010
+    100024: Couche:OBJECT011
+    100026: Couche:OBJECT012
+    100028: Couche:OBJECT013
+    100030: Couche:OBJECT014
+    100032: Couche:OBJECT015
+    100034: Couche:OBJECT016
+    100036: Couche:OBJECT017
+    100038: Couche:OBJECT018
+    100040: Couche:OBJECT019
+    100042: Couche:OBJECT020
+    100044: Couche:OBJECT021
+    100046: Couche:OBJECT022
+    400000: //RootNode
+    400002: Couche:OBJECT000
+    400004: Couche:OBJECT001
+    400006: Couche:OBJECT002
+    400008: Couche:OBJECT003
+    400010: Couche:OBJECT004
+    400012: Couche:OBJECT005
+    400014: Couche:OBJECT006
+    400016: Couche:OBJECT007
+    400018: Couche:OBJECT008
+    400020: Couche:OBJECT009
+    400022: Couche:OBJECT010
+    400024: Couche:OBJECT011
+    400026: Couche:OBJECT012
+    400028: Couche:OBJECT013
+    400030: Couche:OBJECT014
+    400032: Couche:OBJECT015
+    400034: Couche:OBJECT016
+    400036: Couche:OBJECT017
+    400038: Couche:OBJECT018
+    400040: Couche:OBJECT019
+    400042: Couche:OBJECT020
+    400044: Couche:OBJECT021
+    400046: Couche:OBJECT022
+    2300000: Couche:OBJECT000
+    2300002: Couche:OBJECT001
+    2300004: Couche:OBJECT002
+    2300006: Couche:OBJECT003
+    2300008: Couche:OBJECT004
+    2300010: Couche:OBJECT005
+    2300012: Couche:OBJECT006
+    2300014: Couche:OBJECT007
+    2300016: Couche:OBJECT008
+    2300018: Couche:OBJECT009
+    2300020: Couche:OBJECT010
+    2300022: Couche:OBJECT011
+    2300024: Couche:OBJECT012
+    2300026: Couche:OBJECT013
+    2300028: Couche:OBJECT014
+    2300030: Couche:OBJECT015
+    2300032: Couche:OBJECT016
+    2300034: Couche:OBJECT017
+    2300036: Couche:OBJECT018
+    2300038: Couche:OBJECT019
+    2300040: Couche:OBJECT020
+    2300042: Couche:OBJECT021
+    2300044: Couche:OBJECT022
+    3300000: Couche:OBJECT000
+    3300002: Couche:OBJECT001
+    3300004: Couche:OBJECT002
+    3300006: Couche:OBJECT003
+    3300008: Couche:OBJECT004
+    3300010: Couche:OBJECT005
+    3300012: Couche:OBJECT006
+    3300014: Couche:OBJECT007
+    3300016: Couche:OBJECT008
+    3300018: Couche:OBJECT009
+    3300020: Couche:OBJECT010
+    3300022: Couche:OBJECT011
+    3300024: Couche:OBJECT012
+    3300026: Couche:OBJECT013
+    3300028: Couche:OBJECT014
+    3300030: Couche:OBJECT015
+    3300032: Couche:OBJECT016
+    3300034: Couche:OBJECT017
+    3300036: Couche:OBJECT018
+    3300038: Couche:OBJECT019
+    3300040: Couche:OBJECT020
+    3300042: Couche:OBJECT021
+    3300044: Couche:OBJECT022
+    4300000: Couche:OBJECT000
+    4300002: Couche:OBJECT001
+    4300004: Couche:OBJECT002
+    4300006: Couche:OBJECT003
+    4300008: Couche:OBJECT004
+    4300010: Couche:OBJECT005
+    4300012: Couche:OBJECT006
+    4300014: Couche:OBJECT007
+    4300016: Couche:OBJECT008
+    4300018: Couche:OBJECT009
+    4300020: Couche:OBJECT010
+    4300022: Couche:OBJECT011
+    4300024: Couche:OBJECT012
+    4300026: Couche:OBJECT013
+    4300028: Couche:OBJECT014
+    4300030: Couche:OBJECT015
+    4300032: Couche:OBJECT016
+    4300034: Couche:OBJECT017
+    4300036: Couche:OBJECT018
+    4300038: Couche:OBJECT019
+    4300040: Couche:OBJECT020
+    4300042: Couche:OBJECT021
+    4300044: Couche:OBJECT022
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

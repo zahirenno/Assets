@@ -61,7 +61,7 @@ public class Catalog {
 			Bounds b = new Bounds();
 			b.max = new Vector3(-1000,-1000,-1000);
 			b.min = new Vector3(1000,1000,1000);
-			
+
 			foreach (MeshFilter submeshFilter in instmo.GetComponentsInChildren<MeshFilter>()){
 				submeshFilter.gameObject.transform.localScale = new Vector3(1,1,1);
 
@@ -82,13 +82,16 @@ public class Catalog {
 				
 				b.max = tmax;
 				b.min = tmin;
+
 			}
-			
+
 			Vector3 dims = new Vector3((b.max.x - b.min.x),(b.max.y - b.min.y),(b.max.z - b.min.z));
 
 			//Debug.Log(dims);
 
 			dims = instmo.transform.TransformVector(dims);
+
+			Vector3 center = instmo.transform.TransformPoint(b.center);
 			
 			float width = entries[id].width, height = entries[id].height, depth = entries[id].depth;
 			

@@ -53,8 +53,14 @@ public class ListView : MonoBehaviour {
 
 	void refreshList(){
 
-		foreach (Transform child in contentRect.transform)
-			GameObject.Destroy (child.gameObject);
+		foreach (GameObject go in reusable)
+			Destroy (go);
+		foreach (GameObject go in elementIndex.Keys) {
+			decomission(go);
+			Destroy (go);
+		}
+		reusable.Clear ();
+		elementIndex.Clear ();
 
 		float height = 0;
 		for (int i = 0; i < listener.numberOfElements(); ++i) {
@@ -65,6 +71,14 @@ public class ListView : MonoBehaviour {
 
 		rectTransform.sizeDelta = new Vector2 (rectTransform.sizeDelta.x, height);
 
+		RectTransform sct = (RectTransform)scrollRect.transform;
+		Vector3[] g = new Vector3[4];
+		sct.GetWorldCorners(g);
+		float topy = g[0].y;
+		float bottomy = g[2].y;
+
+		numberOfItemsPerPage = (int)(Mathf.Abs(topy - bottomy) / listener.cellHeight()) + 2	;
+		Debug.Log ((int)(((RectTransform)scrollRect.transform).sizeDelta.y));
 		if (numberOfItemsPerPage > listener.numberOfElements ())
 			numberOfItemsPerPage = listener.numberOfElements();
 
@@ -73,15 +87,24 @@ public class ListView : MonoBehaviour {
 		updateVisible ();
 	}
 
+
+	public float lastScreenWidth = 0f;
+	public float lastScreenHeight = 0f;
 	// Update is called once per frame
 	void Update () {
 		if (dirty) {
 			dirty = false;
-			refreshList();
+			refreshList ();
 		}
 
+		
+		if (lastScreenWidth != Screen.width || lastScreenHeight != Screen.height) {
+			lastScreenWidth = Screen.width;
+			lastScreenHeight = Screen.height;
+			Debug.Log("resized");
+			refreshList();
+		}
 	}
-
 
 	private int numberOfItemsPerPage = 10;
 	//private int cellHeight = 100;
@@ -92,7 +115,7 @@ public class ListView : MonoBehaviour {
 		float topy = g[0].y;
 		float bottomy = g[2].y;
 
-		numberOfItemsPerPage = ((int)Mathf.Abs(topy - bottomy) / listener.cellHeight()) + 1;
+		numberOfItemsPerPage = (int)(Mathf.Abs(topy - bottomy) / listener.cellHeight()) + 2	;
 		if (numberOfItemsPerPage > listener.numberOfElements ())
 			numberOfItemsPerPage = listener.numberOfElements();
 	}

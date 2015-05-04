@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: ce204cb861a86cc4d8b6ed9da0f48ea2
+timeCreated: 1430719167
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: brique
+    100002: //RootNode
+    100004: foyer_f
+    100006: hote
+    100008: montantdr
+    100010: montantg
+    100012: pique2
+    100014: pique3
+    100016: pique4
+    100018: pointe
+    100020: pointe_1
+    100022: pointe_2
+    100024: pointe_3
+    100026: pointe_4
+    100028: poutre
+    100030: poutre_bas
+    100032: socle_reserve_bois
+    400000: brique
+    400002: //RootNode
+    400004: foyer_f
+    400006: hote
+    400008: montantdr
+    400010: montantg
+    400012: pique2
+    400014: pique3
+    400016: pique4
+    400018: pointe
+    400020: pointe_1
+    400022: pointe_2
+    400024: pointe_3
+    400026: pointe_4
+    400028: poutre
+    400030: poutre_bas
+    400032: socle_reserve_bois
+    2300000: brique
+    2300002: foyer_f
+    2300004: hote
+    2300006: montantdr
+    2300008: montantg
+    2300010: pique2
+    2300012: pique3
+    2300014: pique4
+    2300016: pointe
+    2300018: pointe_1
+    2300020: pointe_2
+    2300022: pointe_3
+    2300024: pointe_4
+    2300026: poutre
+    2300028: poutre_bas
+    2300030: socle_reserve_bois
+    3300000: brique
+    3300002: foyer_f
+    3300004: hote
+    3300006: montantdr
+    3300008: montantg
+    3300010: pique2
+    3300012: pique3
+    3300014: pique4
+    3300016: pointe
+    3300018: pointe_1
+    3300020: pointe_2
+    3300022: pointe_3
+    3300024: pointe_4
+    3300026: poutre
+    3300028: poutre_bas
+    3300030: socle_reserve_bois
+    4300000: brique
+    4300002: foyer_f
+    4300004: hote
+    4300006: montantdr
+    4300008: montantg
+    4300010: pique2
+    4300012: pique3
+    4300014: pique4
+    4300016: pointe
+    4300018: pointe_1
+    4300020: pointe_2
+    4300022: pointe_3
+    4300024: pointe_4
+    4300026: poutre
+    4300028: poutre_bas
+    4300030: socle_reserve_bois
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

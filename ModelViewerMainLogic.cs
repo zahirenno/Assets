@@ -18,7 +18,7 @@ public class ModelViewerMainLogic : SimpleGameContoller {
 
 		catalog = Catalog.getCatalog ();
 
-		furnitureEntry = catalog.entries ["sofa2#2"];
+		furnitureEntry = catalog.entries [PlayerPrefs.GetString("modelViewer_modelid")];
 		GameObject furniture = catalog.createFurniture (furnitureEntry.id, new Vector3 (0, 0, 0), 0);
 		GameObject floor = (GameObject)GameObject.Instantiate (Resources.Load<GameObject> ("FloorPlane"));
 		//floor.transform.SetParent (furniture.transform);
@@ -29,8 +29,14 @@ public class ModelViewerMainLogic : SimpleGameContoller {
 		GameObject.Find ("MainBar").GetComponent<Image> ().color = preferences.primaryColor;
 		GameObject.Find("FurnitureTitle").GetComponent<Text>().color = preferences.primaryTextColor;
 		GameObject.Find("FurnitureTitle").GetComponent<Text>().font = preferences.primaryTextFont;
+		GameObject.Find("FurnitureTitle").GetComponent<Text>().text = furnitureEntry.name;
+		GameObject.Find ("MainBar").transform.FindChild ("BackButton").GetComponent<Button> ().onClick.AddListener (() => backPressed ());
 	}
-	
+
+	void backPressed(){
+		Application.LoadLevel ("catalogViewer");
+	}
+
 	// Update is called once per frame
 	void Update () {
 		foreach (MeshCollider mc in FindObjectsOfType<MeshCollider> ()) {

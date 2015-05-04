@@ -81,6 +81,8 @@ public class ListViewController<T> : ViewController, ListViewListener
 			elementText.verticalOverflow = VerticalWrapMode.Truncate;
 			elementText.horizontalOverflow = HorizontalWrapMode.Wrap;
 			elementText.resizeTextForBestFit = true;
+			elementText.resizeTextMinSize = 10;
+			elementText.resizeTextMaxSize = 25;
 			//elementText.fontSize = 25;
 		}
 		

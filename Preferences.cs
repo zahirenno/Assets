@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Preferences : MonoBehaviour
 {
+	public Color darkBackColor;
 	public Color primaryColor;
 	public Color secondaryColor;
 	public Color primaryTextColor;
@@ -44,6 +45,7 @@ public class Preferences : MonoBehaviour
 		primaryTextColor = colorFromHex("#FFFFFF");
 		primaryListTextColor = colorFromHex ("#000000");
 		secondaryListTextColor = Color.gray;
+		darkBackColor = colorFromHex ("#222222");
 
 		backgroundColor = Color.gray;
 		primaryTextFont = Resources.Load<Font> ("Fonts/Roboto-Regular");

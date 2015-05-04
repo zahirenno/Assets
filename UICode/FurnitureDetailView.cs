@@ -46,7 +46,7 @@ public class FurnitureDetailView : MonoBehaviour {
 		r_content_transform.GetComponent<VerticalLayoutGroup> ().spacing = 15;
 
 		Catalog c = Catalog.getCatalog ();
-		FurnitureEntry fe = c.entries ["sofa2#5"];
+		FurnitureEntry fe = c.entries [PlayerPrefs.GetString("modelViewer_modelid")];
 
 		createPrimaryText ("Name:");
 		createSecondaryText (fe.name);
