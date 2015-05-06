@@ -36,10 +36,7 @@ public class CatalogBrowser : ListViewController<string>, FurnitureListViewContr
 
 		return false;
 	}
-
-	protected override int cellHeight(){
-		return 60;
-	}
+	
 
 
 	// Use this for initialization

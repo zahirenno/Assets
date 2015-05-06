@@ -86,7 +86,7 @@ public class RoomHelper
 		}
 
 		for (int i=0; i<configurations.Count; ++i) {
-			Debug.Log(configurations[i]);
+			//Debug.Log(configurations[i]);
 		}
 	}
 

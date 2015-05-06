@@ -56,7 +56,7 @@ public class StandbyState : State {
 		cameraFOV = this.camera.fieldOfView;
 
 		FirstController.getGlobalFirstController ().deleteButtonIsVisible (false);
-		FirstController.getGlobalFirstController ().regenButton.gameObject.SetActive (true);
+		FirstController.getGlobalFirstController ().orderButton.gameObject.SetActive (true);
 		FirstController.getGlobalFirstController ().navButtonIsVisible (true);
 
 		base.Enter ();

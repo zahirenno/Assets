@@ -20,7 +20,7 @@ public class FirstController : MonoBehaviour {
 	public bool onButtonClick (Button sender){
 		if (sender.Equals(deleteButton)) {
 			return this.onDeleteButtonClicked(sender);
-		}
+		} 
 		return false;
 	}
 
@@ -53,6 +53,7 @@ public class FirstController : MonoBehaviour {
 	public List<DButtonClicked> dUnknownButtonClicked = new List<DButtonClicked>();
 	public List<DButtonClicked> dRegenButtonClicked = new List<DButtonClicked> ();
 	public List<DButtonClicked> dUndoButtonClicked = new List<DButtonClicked> ();
+	public List<DButtonClicked> dOrderButtonClicked = new List<DButtonClicked>();
 
 	void onSwitchToCatalogCategories(CatalogBrowser browser){
 		Debug.Log ("Presented Furniture Categories");
@@ -90,6 +91,18 @@ public class FirstController : MonoBehaviour {
 		bool res = false;
 		List<DButtonClicked> lsCopy = new List<DButtonClicked> ();
 		lsCopy.AddRange (dDeleteButtonClicked);
+		foreach (DButtonClicked df in lsCopy)
+			if (df.Invoke (sender))
+				res = true;
+		return res;
+	}
+
+	bool onOrderButtonClicked(Button sender){
+		Debug.Log ("Order Pressed");
+		
+		bool res = false;
+		List<DButtonClicked> lsCopy = new List<DButtonClicked> ();
+		lsCopy.AddRange (dOrderButtonClicked);
 		foreach (DButtonClicked df in lsCopy)
 			if (df.Invoke (sender))
 				res = true;
@@ -160,6 +173,7 @@ public class FirstController : MonoBehaviour {
 	public GameObject menuBar;
 	public GameObject navBar;
 	public Button regenButton;
+	public Button orderButton;
 	public Button undoButton, undoButtonFS;
 
 	// Use this for initialization
@@ -194,11 +208,14 @@ public class FirstController : MonoBehaviour {
 		showMenuButton = GameObject.Find ("ShowMenuButton").GetComponent<Button>();
 		showMenuButton.onClick.AddListener (() => onShowMenuButtonClicked (showMenuButton));
 
+		orderButton = GameObject.Find ("PlaceOrderButton").GetComponent<Button> ();
+		orderButton.onClick.AddListener (() => onOrderButtonClicked (orderButton));
+
 		menuBar = GameObject.Find ("Window");
 
 		regenButton = GameObject.Find ("RegenButton").GetComponent<Button> ();
 		//regenButton.onClick.AddListener (() => onRegenButtonClicked (regenButton));
-		regenButton.gameObject.GetComponent<Image> ().color = prefrences.secondaryColor;
+		orderButton.gameObject.GetComponent<Image> ().color = prefrences.secondaryColor;
 
 		undoButton = GameObject.Find ("UndoButton").GetComponent<Button> ();
 		undoButton.gameObject.SetActive (true);

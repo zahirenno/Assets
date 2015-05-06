@@ -133,14 +133,12 @@ public class FurniturePreviewCellView : MonoBehaviour
 		}
 
 		Color h1 = toHSV (c);
-		h1.g += 0.2f;
+		h1.g += 0.3f;
 		h1.b -= 0.1f;
 		c = toRGB (h1);
 		transform.FindChild ("Panel").GetComponent<Image> ().color = c;
 
 		Color h = toHSV (c);
-
-		Debug.Log ("HSV of: " + c + " is :" + h + "and returns: " + toRGB (h));
 
 		h.r += 0.5f;
 		/*if (h.r > 1.0f)
@@ -149,8 +147,8 @@ public class FurniturePreviewCellView : MonoBehaviour
 			h.r += 1.0f;*/
 
 		//h.b = 1.0f - h.b;
-		if (h.b >= 0.6f) 
-			h.b -= 0.5f;
+		if (h.b >= 0.8f) 
+			h.b = 0.5f;
 		else 
 			h.b = 1;
 		furnitureName.color = toRGB (h) /*Color.white - c + Color.black*/;

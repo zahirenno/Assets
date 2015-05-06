@@ -6,6 +6,68 @@ public class Room : MonoBehaviour {
 	public List<Furniture> furnitures = new List<Furniture>();
 	public EditableRoom editableRoom;
 
+	string MyEscapeURL (string url)
+	{
+		return WWW.EscapeURL(url).Replace("+","%20");
+	}
+
+	void SendEmail (string _address, string _subject, string _body)
+	{
+		string email = _address;
+		string subject = MyEscapeURL(_subject);
+		string body = MyEscapeURL(_body);
+		
+		Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body);
+	}
+
+
+	public void generateOrder(){
+		Dictionary<FurnitureEntry, int> items = new Dictionary<FurnitureEntry, int> ();
+
+		foreach (Furniture furniture in furnitures) {
+			if (!items.ContainsKey(furniture.getFurnitureType()))
+				items.Add(furniture.getFurnitureType(), 0);
+			++items[furniture.getFurnitureType()];
+		}
+
+		string result = "<html><head></head><body>";
+
+		result += "<img src=\"http://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ikea_logo.svg/200px-Ikea_logo.svg.png\" align=\"middle\" width=100% />";
+
+		result += "<table border=\"1\" width=\"100%\">";
+
+		result += "<tr>";
+		
+		result += "<td>" + "Item Code" + "</td>";
+		result += "<td>" + "Unit Price" + "</td>";
+		result += "<td>" + "Qty" + "</td>";
+		result += "<td>" + "Total" + "</td>";
+		
+		result += "</tr>";
+
+		foreach (KeyValuePair<FurnitureEntry, int> kv in items) {
+			result += "<tr>";
+
+			result += "<td>" + kv.Key.id + "</td>";
+			result += "<td>" + "$" + kv.Key.price.ToString("0.00") + "</td>";
+			result += "<td>" + kv.Value + "</td>";
+			result += "<td>" + "$" + (kv.Key.price * (float)kv.Value).ToString("0.00") + "</td>";
+
+			result += "</tr>";
+		}
+
+		result += "</table>";
+
+		result += "</body></html>";
+
+
+
+		SendEmail ("elie.karouz@gmail.com", "Order", result);
+
+		//System.IO.File.WriteAllText ("C:/Users/Zahi Renno/Documents/gggg.html", result);
+
+	}
+
 	public string getXML(){
 		string result = "";
 

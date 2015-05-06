@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ListViewController<T> : ViewController, ListViewListener
 {
 
+	public Preferences preferences;
+
 	public List<T> data = new List<T>();
 	public string cellName = "StandardListItem";
 
@@ -44,6 +46,10 @@ public class ListViewController<T> : ViewController, ListViewListener
 	// Use this for initialization
 	protected virtual void Start ()
 	{
+		if (preferences == null)
+			if (FirstController.getGlobalFirstController() != null)
+				preferences = FirstController.getGlobalFirstController ().prefrences;
+
 		ListView l = gameObject.GetComponent<ListView> ();
 		if (l == null)
 			l = gameObject.AddComponent<ListView> ();
@@ -76,8 +82,8 @@ public class ListViewController<T> : ViewController, ListViewListener
 			Text elementText = element.GetComponentInChildren<Text> ();
 			
 			elementText.text = data [i].ToString();
-			elementText.font = FirstController.getGlobalFirstController().prefrences.secondaryTextFont;
-			elementText.alignment = TextAnchor.MiddleCenter;
+			elementText.font = preferences.secondaryTextFont;
+			elementText.alignment = TextAnchor.MiddleLeft;
 			elementText.verticalOverflow = VerticalWrapMode.Truncate;
 			elementText.horizontalOverflow = HorizontalWrapMode.Wrap;
 			elementText.resizeTextForBestFit = true;

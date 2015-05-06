@@ -16,7 +16,7 @@ public class FurnitureGridViewController : ListViewController<List<FurnitureEntr
 	{
 		base.Start ();
 
-		r_transform = (RectTransform)(transform.parent);
+		r_transform = (RectTransform)(transform);
 
 		cellName = "FurniturePreviewCellPrefab";
 

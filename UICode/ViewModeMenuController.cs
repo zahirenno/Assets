@@ -25,9 +25,7 @@ public class ViewModeMenuController : ListViewController<string>
 		return false;
 	}
 	
-	protected override int cellHeight(){
-		return 50;
-	}
+
 	
 	// Update is called once per frame
 	void Update ()

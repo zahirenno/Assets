@@ -56,6 +56,8 @@ public class FurnitureDetailView : MonoBehaviour {
 		createSecondaryText (fe.category);
 		createPrimaryText ("Dimensions:");
 		createSecondaryText (fe.depth + "m x " + fe.height + "m x " + fe.width + "m");
+		createPrimaryText ("Price:");
+		createSecondaryText ("$" + fe.price.ToString ("0.00"));
 
 
 

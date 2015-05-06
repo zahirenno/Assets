@@ -83,7 +83,7 @@ public class ObjectFocusState : State, ZoomCamera.IZoomCameraListener{
 		//assume that the furniture is going to be rotated
 		FirstController.getGlobalFirstController ().dDeleteButtonClicked.Add (onDelete);
 		FirstController.getGlobalFirstController ().dFurniturePicked.Add (onSelectedFurniture);
-		FirstController.getGlobalFirstController ().regenButton.gameObject.SetActive (false);
+		FirstController.getGlobalFirstController ().orderButton.gameObject.SetActive (false);
 		FirstController.getGlobalFirstController ().navButtonIsVisible (false);
 		base.Enter ();
 	}

@@ -12,6 +12,7 @@ public class MotherGameController : MonoBehaviour
 	public Button deleteButton;
 	public Button newButton;
 	public Button recolorButton;
+	public Button orderButton;
 	public int current;
 	List<GameObject> rt;
 	public RoomHelper roomHelper;

@@ -78,10 +78,12 @@ public class GameController : MonoBehaviour {
 		gameObject.AddComponent<ReleaseGesture>().Released += TouchEvent;
 
 		FirstController.getGlobalFirstController ().dRegenButtonClicked.Add (onRegen);
+		FirstController.getGlobalFirstController ().dOrderButtonClicked.Add (onOrderRoom);
 
 	}
 
 	private bool onRegen(Button sender){
+
 		reloadScene ();
 
 		return false;
@@ -117,5 +119,11 @@ public class GameController : MonoBehaviour {
 			Debug.Log ("shshshdsgh");
 			reflectionProbe.GetComponent<ReflectionProbe> ().RenderProbe ();
 		}
+	}
+
+	private bool onOrderRoom(Button sender){
+		//mainRoom.GetComponentInChildren<Room> ().generateOrder ();
+		Debug.Log ("Order placed");
+		return false;
 	}
 }
