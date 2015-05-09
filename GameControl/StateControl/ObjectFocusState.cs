@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 using TouchScript.Gestures;
 using UnityEngine.UI;
@@ -109,6 +110,10 @@ public class ObjectFocusState : State, ZoomCamera.IZoomCameraListener{
 	
 	bool rotatedDirty = false;
 	protected override void onPanRunning(PanGesture gesture){
+		/*if (gesture.ActiveTouches.Count > 0)
+			if (EventSystem.current.IsPointerOverGameObject ())
+				return;*/
+
 		rotatedDirty = true;
 		focusedObject.Rotate(0, -(gesture.ScreenPosition.x - gesture.PreviousScreenPosition.x) * .5f, 0, Space.World);
 		GameObject.Find("MessageBox").GetComponent<Text>().text = focusedObject.eulerAngles.y.ToString("0") + "\u00B0";

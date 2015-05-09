@@ -8,7 +8,7 @@ public class StandbyState : State {
 	void Start () {
 
 	}
-	
+
 	protected override void onLongPressRunning(LongPressGesture gesture) {
 
 		if (this.getHitObject() == null){
@@ -60,6 +60,12 @@ public class StandbyState : State {
 		FirstController.getGlobalFirstController ().navButtonIsVisible (true);
 
 		base.Enter ();
+	}
+
+	public override void dismiss (State nextState, bool shouldPop)
+	{
+		
+		base.dismiss (nextState, shouldPop);
 	}
 
 	protected override void onScaleRunning(ScaleGesture gesture){

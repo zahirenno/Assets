@@ -2,26 +2,35 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System;
 
-public class DragOut : MonoBehaviour/*, IDragHandler, IPointerExitHandler, IPointerUpHandler */{
+public class DragOut : MonoBehaviour, IDragHandler, IPointerExitHandler, IPointerUpHandler {
 
 	private enum STATE {standby, dragging, exited, moving};
 	private STATE state = STATE.standby;
 
+	public delegate void OnDraggedOut(Vector2 pos);
+
+	public OnDraggedOut onDraggedOut = null;
+
 	public void OnDrag(PointerEventData eventData){
+
 		switch (state) {
 		case STATE.standby:
 			state = STATE.dragging;
 			break;
 		case STATE.exited:
 			state = STATE.moving;
+			if (onDraggedOut != null)
+				onDraggedOut.Invoke(eventData.position);
+			break;
+		case STATE.moving:
 			break;
 		}
-
-
 	}
 
 	public void OnPointerExit(PointerEventData eventData){
+
 		switch (state) {
 		case STATE.dragging:
 			state = STATE.exited;
@@ -33,22 +42,19 @@ public class DragOut : MonoBehaviour/*, IDragHandler, IPointerExitHandler, IPoin
 
 	public void OnPointerUp(PointerEventData eventData){
 		state = STATE.standby;
-
-
 	}
 
 
 	public delegate void EventDelegate(UnityEngine.EventSystems.BaseEventData baseEvent);
 
 	public void DropEventMethod(UnityEngine.EventSystems.BaseEventData baseEvent) {
-		Debug.Log(baseEvent.selectedObject.name + " triggered an event!");
+		//Debug.Log(baseEvent.selectedObject.name + " triggered an event!");
 		//baseEvent.selectedObject is the GameObject that triggered the event,
 		// so we can access its components, destroy it, or do whatever.
 	}
 
 	// Use this for initialization
 	void Start () {
-		gameObject.AddComponent<EventTrigger> ();
 
 		EventTrigger trigger = GetComponent<EventTrigger> ();
 

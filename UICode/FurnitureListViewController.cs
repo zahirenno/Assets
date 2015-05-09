@@ -7,6 +7,7 @@ public class FurnitureListViewController : ViewController, ListViewListener{
 
 	public interface IFurnitureViewListener{
 		void onSelectedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry);
+		void onDraggedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry, Vector2 screenPosition);
 	}
 	public IFurnitureViewListener listener;
 
@@ -47,9 +48,9 @@ public class FurnitureListViewController : ViewController, ListViewListener{
 		Image image = element.GetComponent<Image> ();
 		image.sprite = sp;
 
+		Text elementText = element.GetComponentInChildren<Text> ();
+		elementText.text = "";
 		if (sp == null) {
-			Text elementText = element.GetComponentInChildren<Text> ();
-
 			elementText.text = l [i].name;
 			elementText.font = Font.CreateDynamicFontFromOSFont (Font.GetOSInstalledFontNames () [0], 32);
 			elementText.alignment = TextAnchor.MiddleCenter;
@@ -59,6 +60,8 @@ public class FurnitureListViewController : ViewController, ListViewListener{
 			elementText.fontSize = 25;
 		}
 
+		int final_i = i;
+		elementTransform.GetComponent<DragOut>().onDraggedOut = (Vector2 position) => listener.onDraggedFurniture(this, l[final_i], position);
 
 		return elementTransform;
 	}

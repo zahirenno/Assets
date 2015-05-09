@@ -6,6 +6,7 @@ using System.IO;
 using System;
 using System.Collections.Generic;
 using System.Xml;
+using UnityEngine.EventSystems;
 
 public class GameController : MonoBehaviour {
 
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void TouchEvent(object sender, EventArgs e){
+
+
 		Gesture gesture = (Gesture)sender;
 
 		GestureResult res = new GestureResult ();
@@ -44,10 +47,6 @@ public class GameController : MonoBehaviour {
 	public void GestureChanged(GestureResult gesture){
 		ss1.update (gesture);
 	}
-
-
-
-
 
 	// Use this for initialization
 	void Start () {

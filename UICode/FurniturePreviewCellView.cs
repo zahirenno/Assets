@@ -1,9 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class FurniturePreviewCellView : MonoBehaviour
+public class FurniturePreviewCellView : MonoBehaviour, IPointerClickHandler
 {
+
+	
+	public void OnPointerClick(PointerEventData eventData)
+	{
+	}
+
 	private FurnitureEntry _furnitureEntry;
 	public FurnitureEntry furnitureEntry{
 		get { return _furnitureEntry;}

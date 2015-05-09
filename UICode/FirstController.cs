@@ -43,6 +43,16 @@ public class FirstController : MonoBehaviour {
 		return false;
 	}
 
+	public bool onListItemDragged(object sender, int index, object obj, Vector2 screenPosition){
+		Debug.Log ("reached fvc");
+
+		if (sender is FurnitureListViewController)
+			return this.onFurnitureDragged (currentViewController, (FurnitureEntry)obj, screenPosition);
+		return false;
+	}
+
+	public delegate bool DFurnitureDragged(ViewController sender, FurnitureEntry entry, Vector2 screenPosition);
+	public List<DFurnitureDragged> dFurnitureDragged = new List<DFurnitureDragged>();
 	public delegate bool DFurniturePicked(ViewController sender, FurnitureEntry entry);
 	public List<DFurniturePicked> dFurniturePicked = new List<DFurniturePicked>();
 	public delegate bool DFurnitureCategoryPicked(ViewController sender, string categoryId);
@@ -69,6 +79,19 @@ public class FirstController : MonoBehaviour {
 		bool res = false;
 		foreach (DFurniturePicked df in dFurniturePicked)
 			if (df.Invoke (sender, entry))
+				res = true;
+		return res;
+	}
+
+	bool onFurnitureDragged(ViewController sender, FurnitureEntry entry, Vector2 screenPosition){
+		Debug.Log ("Picked Dragged: " + entry.model);
+		Debug.Log (dFurnitureDragged.Count);
+
+		bool res = false;
+		List<DFurnitureDragged> lsCopy = new List<DFurnitureDragged> ();
+		lsCopy.AddRange (dFurnitureDragged);
+		foreach (DFurnitureDragged df in lsCopy)
+			if (df.Invoke (sender, entry, screenPosition))
 				res = true;
 		return res;
 	}

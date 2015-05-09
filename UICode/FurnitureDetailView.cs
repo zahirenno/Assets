@@ -23,7 +23,7 @@ public class FurnitureDetailView : MonoBehaviour {
 		te.fontSize = 40;
 		te.text = v;
 		te.font = preferences.primaryTextFont;
-		te.transform.parent = r_content_transform;
+		te.transform.SetParent(r_content_transform);
 
 		return te;
 	}

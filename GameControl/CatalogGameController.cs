@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class CatalogGameController : MonoBehaviour {
 
+	public List<FurnitureEntry> wishList = new List<FurnitureEntry> ();
+
 	public Preferences preferences;
 	public PagedScrollView catalogView;
 

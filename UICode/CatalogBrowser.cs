@@ -10,11 +10,23 @@ public class CatalogBrowser : ListViewController<string>, FurnitureListViewContr
 	public delegate void SelectedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry);
 	public SelectedFurniture SelectedFurnitureHandle;
 
+	public delegate void DraggedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry, Vector2 screenPosition);
+	public DraggedFurniture DraggedFurnitureHandle;
+
 	public void onSelectedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry){
 
 		if (SelectedFurnitureHandle != null)
 			SelectedFurnitureHandle (sender, selectedEntry);
 
+	}
+
+	public void onDraggedFurniture(FurnitureListViewController sender, FurnitureEntry selectedEntry, Vector2 screenPosition){
+
+		Debug.Log (selectedEntry.name);
+		if (DraggedFurnitureHandle != null)
+			DraggedFurnitureHandle.Invoke (sender, selectedEntry, screenPosition);
+
+		FirstController.getGlobalFirstController ().onListItemDragged (sender, 0, selectedEntry, screenPosition);
 	}
 
 	protected override int numberOfElements(){

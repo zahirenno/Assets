@@ -32,7 +32,7 @@ public class HomeFurnitureGridViewController : ListViewController<List<Furniture
 		data [data.Count - 1].Add (catalog.entries ["sofa2#17"]);
 
 
-		titles.Add ("Hot Items");
+		titles.Add ("Hot Picks");
 		data.Add(new List<FurnitureEntry>());
 		data [data.Count - 1].Add (catalog.entries ["GdB#armchair2"]);
 		data [data.Count - 1].Add (catalog.entries ["GdB#computerWorkstation"]);
@@ -44,7 +44,7 @@ public class HomeFurnitureGridViewController : ListViewController<List<Furniture
 		data [data.Count - 1].Add (catalog.entries ["Sheep#aquarium"]);
 		data [data.Count - 1].Add (catalog.entries ["Geantick#barStool"]);
 
-		titles.Add ("Chique");
+		titles.Add ("Chic");
 		data.Add(new List<FurnitureEntry>());
 		data [data.Count - 1].Add (catalog.entries ["sofa1#1"]);
 		data [data.Count - 1].Add (catalog.entries ["sofa1#4"]);

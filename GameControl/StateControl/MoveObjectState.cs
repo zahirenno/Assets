@@ -8,7 +8,7 @@ public class MoveObjectState : State {
 	// Use this for initialization
 	
 	
-	private Transform focusedObject;
+	public Transform focusedObject;
 	private Command b;
 	
 	public override void Enter(){
