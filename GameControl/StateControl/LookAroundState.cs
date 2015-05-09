@@ -28,15 +28,17 @@ public class LookAroundState : State {
 	}
 
 	public override void Enter(){
-		FirstController.getGlobalFirstController ().dFurnitureDragged.Add (onFurnitureDragged);
-		
+		if (FirstController.getGlobalFirstController () != null) {
+			FirstController.getGlobalFirstController ().dFurnitureDragged.Add (onFurnitureDragged);
+		}
 		base.Enter ();
 	}
 	
 	public override void dismiss (State nextState, bool shouldPop)
 	{
-		FirstController.getGlobalFirstController ().dFurnitureDragged.Remove (onFurnitureDragged);
-		
+		if (FirstController.getGlobalFirstController () != null) {
+			FirstController.getGlobalFirstController ().dFurnitureDragged.Remove (onFurnitureDragged);
+		}
 		base.dismiss (nextState, shouldPop);
 	}
 
