@@ -39,8 +39,10 @@ public class PagedScrollView : MonoBehaviour
 
 	private float targetPosition = 0;
 	public float normalizedSpeed = 1.0f;
-	public void goToPage(int p){
+	public void goToPage(int p, bool animated = true){
 		targetPosition = (float)p / (float)(_pages - 1);
+		if (!animated)
+			scrollRect.horizontalNormalizedPosition = targetPosition;
 	}
 
 	protected float getWidth(){

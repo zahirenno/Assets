@@ -112,47 +112,116 @@ public class FurniturePreviewCellView : MonoBehaviour, IPointerClickHandler
 		return result;
 	}
 
+	IEnumerator co;
+
+	IEnumerator downloadImg(string url){
+
+
+		Debug.Log ("downloading from " + url);
+
+		/*long ins = System.DateTime.Now.Millisecond;
+		System.IO.FileStream f = System.IO.File.OpenRead (url);
+		Debug.Log ("opening file: " + (System.DateTime.Now.Millisecond - ins));
+
+		byte[] da = new byte[f.Length];
+		int c = 0;
+		int chunks = 1500;
+		while (c < f.Length) {
+			int l = chunks;
+			if (l > (int)f.Length - c)
+				l = (int)f.Length - c;
+			c += f.Read(da, c, l);
+			//Debug.Log ("read " + c + "bytes from " + url);
+			yield return 0;
+		}*/
+
+		//Debug.Log ("DONE downloading from " + url);
+
+
+		//texture.LoadImage (da);
+
+		WWW www = new WWW(url);
+
+		//WWW www = WWW.LoadFromCacheOrDownload (url, 0);
+		while (!www.isDone) {
+			yield return 0;
+		}
+		Debug.Log ("size :: " + www.size);
+		Debug.Log (www.bytesDownloaded);
+		//www.LoadImageIntoTexture(texture);
+		Texture2D texture = new Texture2D(366, 366, TextureFormat.RGB24, false);
+
+		texture.LoadImage (www.bytes);
+		Sprite image = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(183, 183));
+
+
+
+		setImage (image);
+	}
+
 	public void updateData(){
 		furnitureName.text = furnitureEntry.name;
-		previewImage.sprite = Resources.Load<Sprite> ("Thumbnails/" + furnitureEntry.id);
 
+		Sprite sp = Resources.Load<Sprite> ("Thumbnails/" + furnitureEntry.id);
+		setImage (sp);
+		return;
+
+		/*Sprite imageSprite = null;
+		try{
+			imageData = System.IO.File.ReadAllBytes (System.IO.Path.Combine (Application.streamingAssetsPath, "Thumbnails/" + furnitureEntry.id + ".jpg"));
+			Texture2D tex = new Texture2D (366, 366, TextureFormat.RGB24, false);
+			tex.LoadImage (imageData);
+			imageSprite = Sprite.Create (tex, new Rect (0, 0, 366, 366), new Vector2 (183, 183));
+		}catch (System.Exception o){
+		}*/
+
+		if (co != null)
+			StopCoroutine (co);	
+		co = downloadImg("file:///" + Application.streamingAssetsPath + "/Thumbnails/" + "sofa1_7" + ".jpg");
+		//co = downloadImg("file:///c://Users/Zahi Renno/Documents/Unity Projects/modgeo/Assets" + "/StreamingAssets/Thumbnails/" + "sofa2#3" + ".jpg");
+		StartCoroutine (co);
+	}
+
+	public void setImage(Sprite imageSprite){
+		previewImage.sprite = imageSprite;//Resources.Load<Sprite> ("Thumbnails/" + furnitureEntry.id);
+		
 		Color c = Color.black;
 		if (previewImage.sprite != null) {
 			int stepSize = 50;
 			float ct = 0;
-
+			
 			int padding = 50;
 			Vector2 center = new Vector2(previewImage.sprite.texture.width / 2.0f, previewImage.sprite.texture.height / 2.0f);
-
+			
 			for (int x = padding; x < previewImage.sprite.texture.width - padding; x += stepSize) {
 				for (int y = padding; y < previewImage.sprite.texture.height - padding; y += stepSize) {
 					Color pix = previewImage.sprite.texture.GetPixel (x, y);
-
+					
 					float d = Vector2.Distance(center, new Vector2(x,y));
 					float v = Mathf.Exp(-d / 50.0f);
-
+					
 					c += pix * pix.a * v;
 					ct += pix.a * v;
 				}
 			}
-
+			
 			c /= ct;
 		}
-
+		
 		Color h1 = toHSV (c);
 		h1.g += 0.3f;
 		h1.b -= 0.1f;
 		c = toRGB (h1);
 		transform.FindChild ("Panel").GetComponent<Image> ().color = c;
-
+		
 		Color h = toHSV (c);
-
+		
 		h.r += 0.5f;
 		/*if (h.r > 1.0f)
 			h.r -= 1.0f;
 		if (h.r < 0)
 			h.r += 1.0f;*/
-
+		
 		//h.b = 1.0f - h.b;
 		if (h.b >= 0.8f) 
 			h.b = 0.5f;

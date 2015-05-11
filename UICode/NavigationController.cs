@@ -67,6 +67,7 @@ public class NavigationController : MonoBehaviour {
 	void Start () {
 		root.setFirstController (firstController);
 		stack.Push (root);
+
 		backButton.gameObject.SetActive (false);
 
 		if (firstController != null) {

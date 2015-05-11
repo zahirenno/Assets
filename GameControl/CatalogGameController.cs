@@ -35,6 +35,8 @@ public class CatalogGameController : MonoBehaviour {
 			tab.GetComponent<Text>().color = c;
 			tab.onClick.AddListener (() => onTabClicked (t));
 		}
+
+		tabs [0].onClick.Invoke ();
 	}
 
 	void onTabClicked(Button sender){

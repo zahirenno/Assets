@@ -34,7 +34,7 @@ public class ModelViewerMainLogic : SimpleGameContoller {
 	}
 
 	void backPressed(){
-		Application.LoadLevel ("catalogViewer");
+		Application.LoadLevel (PlayerPrefs.GetString("lastScene"));
 	}
 
 	// Update is called once per frame

@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class DragOut : MonoBehaviour, IDragHandler, IPointerExitHandler, IPointerUpHandler {
@@ -19,6 +20,12 @@ public class DragOut : MonoBehaviour, IDragHandler, IPointerExitHandler, IPointe
 		case STATE.standby:
 			state = STATE.dragging;
 			break;
+		case STATE.dragging:
+			List<RaycastResult> res = new List<RaycastResult>();
+			EventSystem.current.RaycastAll(eventData, res);
+			if (res.Count <= 0)
+				state = STATE.exited;
+			break;
 		case STATE.exited:
 			state = STATE.moving;
 			if (onDraggedOut != null)
@@ -30,6 +37,7 @@ public class DragOut : MonoBehaviour, IDragHandler, IPointerExitHandler, IPointe
 	}
 
 	public void OnPointerExit(PointerEventData eventData){
+		return;
 
 		switch (state) {
 		case STATE.dragging:

@@ -246,6 +246,7 @@ public class FirstController : MonoBehaviour {
 		undoButtonFS = GameObject.Find ("UndoButtonFS").GetComponent<Button> ();
 		undoButtonFS.gameObject.SetActive (false);
 
+		menuBar.GetComponent<NavigationController>().backButton.gameObject.GetComponent<Image> ().color = prefrences.primaryColor;
 
 	}
 	

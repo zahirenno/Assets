@@ -60,7 +60,7 @@ public class HomeFurnitureGridViewController : ListViewController<List<Furniture
 	}
 	
 	protected virtual void cellSelected(GameObject sender, int i){
-		
+		PlayerPrefs.SetString ("lastScene", Application.loadedLevelName);
 		PlayerPrefs.SetString ("modelViewer_modelid", sender.GetComponent<FurniturePreviewCellView> ().furnitureEntry.id);
 		Application.LoadLevel ("modelViewer");
 		

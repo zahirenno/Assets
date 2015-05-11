@@ -29,6 +29,8 @@ public class thumbnailCreator : MonoBehaviour {
 		if (i < ids.Count) {
 			go = catalog.createFurniture(ids[i].id, new Vector3(0,0,0), 160.0f);
 
+			//Camera.main.transform.LookAt(go.transform.position);
+			Camera.main.fieldOfView = Mathf.Asin(Mathf.Max (ids[i].width, ids[i].height, ids[i].depth) / 2.0f / 3.0f) * 2.0f * 180.0f / 3.14f;
 
 			++i;
 			probe.RenderProbe();
@@ -38,10 +40,10 @@ public class thumbnailCreator : MonoBehaviour {
 	void OnRenderImage (RenderTexture source, RenderTexture destination){
 		destination = source;
 
-		Texture2D output = new Texture2D (source.width, source.height);
+		Texture2D output = new Texture2D (source.width, source.height, TextureFormat.ARGB32, false);
 		output.ReadPixels (new Rect (0, 0, source.width, source.height), 0, 0);
-		byte[] data = output.EncodeToJPG ();
+		byte[] data = output.EncodeToPNG ();
 
-		System.IO.File.WriteAllBytes ("c:\\Users\\Zahi Renno\\Pictures\\sh\\" + ids [i-1].id + ".jpg", data);
+		System.IO.File.WriteAllBytes ("c:\\Users\\Zahi Renno\\Pictures\\sh\\" + ids [i-1].id + ".png", data);
 	}
 }

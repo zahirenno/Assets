@@ -58,6 +58,7 @@ public class GameController : MonoBehaviour {
 
 		PanGesture pan = gameObject.AddComponent<PanGesture> ();
 		pan.Panned += TouchEvent;
+		//pan.MovementThreshold = 0;
 		
 		TapGesture tap = gameObject.AddComponent<TapGesture>();
 		tap.Tapped += TouchEvent;
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour {
 
 		ScaleGesture scale = gameObject.AddComponent<ScaleGesture> ();
 		scale.Scaled += TouchEvent;
+		//scale.MinPointsDistance = 0;
 
 		gameObject.AddComponent<PressGesture>().Pressed += TouchEvent;
 		

@@ -43,7 +43,7 @@ public class FurnitureListViewController : ViewController, ListViewListener{
 
 		elementTransform.sizeDelta = new Vector2 (170, 170);
 
-		Sprite sp = Resources.Load<Sprite> (l [i].image);
+		Sprite sp = Resources.Load<Sprite> ("transparentThumbnails/" + l[i].id);
 
 		Image image = element.GetComponent<Image> ();
 		image.sprite = sp;

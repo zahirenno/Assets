@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System.Collections.Generic;
 using TouchScript.Gestures;
 
 public class LookAroundState : State {
@@ -49,8 +50,13 @@ public class LookAroundState : State {
 	}
 
 	protected override void die(State nextState, bool shouldPop){
-		turnTableCamera.enabled = false;
+		if (turnTableCamera != null)
+			turnTableCamera.enabled = false;
 		base.die (nextState, shouldPop);
+	}
+
+	protected override void onPanStarting(PanGesture gesture){
+		this.start ();
 	}
 
 	protected override void onPanRunning(PanGesture gesture){
@@ -58,6 +64,20 @@ public class LookAroundState : State {
 		/*if (gesture.ActiveTouches.Count > 0)
 			if (EventSystem.current.IsPointerOverGameObject ())
 				return;*/
+
+		if (gesture.ActiveTouches.Count > 0) {
+			PointerEventData ped = new PointerEventData(EventSystem.current);
+			ped.position = gesture.ScreenPosition;
+			List<RaycastResult> hit = new List<RaycastResult>();
+			EventSystem.current.RaycastAll(ped, hit);
+
+			foreach (RaycastResult rr in hit){
+				if (rr.gameObject.name.Equals("MessageBox"))
+					continue;
+				else
+					return;
+			}
+		}
 
 		turnTableCamera.setDelta ((gesture.ScreenPosition - gesture.PreviousScreenPosition) / 10.0f);
 	}
@@ -78,4 +98,7 @@ public class LookAroundState : State {
 
 	}
 
+	protected override void UpdateStarting(){
+
+	}
 }

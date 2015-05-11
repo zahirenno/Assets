@@ -25,7 +25,7 @@ public class MainMenuController : ListViewController<string>
 		icons.Add ("icons/ic_visibility_white_48dp");
 		icons.Add ("icons/ic_exit_to_app_white_48dp");
 
-		navigationController.title.text = "Posh.";
+		//navigationController.title.text = "Posh.";
 
 		base.Start ();
 	}
