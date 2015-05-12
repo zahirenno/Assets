@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
+using System.Collections.Generic;
 using TouchScript.Gestures;
 using UnityEngine.UI;
 
@@ -113,6 +114,20 @@ public class ObjectFocusState : State, ZoomCamera.IZoomCameraListener{
 		/*if (gesture.ActiveTouches.Count > 0)
 			if (EventSystem.current.IsPointerOverGameObject ())
 				return;*/
+
+		if (gesture.ActiveTouches.Count > 0) {
+			PointerEventData ped = new PointerEventData(EventSystem.current);
+			ped.position = gesture.ScreenPosition;
+			List<RaycastResult> hit = new List<RaycastResult>();
+			EventSystem.current.RaycastAll(ped, hit);
+			
+			foreach (RaycastResult rr in hit){
+				if (rr.gameObject.name.Equals("MessageBox"))
+					continue;
+				else
+					return;
+			}
+		}
 
 		rotatedDirty = true;
 		focusedObject.Rotate(0, -(gesture.ScreenPosition.x - gesture.PreviousScreenPosition.x) * .5f, 0, Space.World);
